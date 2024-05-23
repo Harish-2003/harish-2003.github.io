@@ -71,11 +71,7 @@ Contributions to improve the website are welcome. You can fork the repository an
 3. Commit your changes.
 4. Push your branch and create a pull request.
 
-## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
-
----
 
 ### Code Explanation
 
