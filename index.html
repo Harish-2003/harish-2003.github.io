@@ -1,0 +1,306 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> Personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f18b6457b7.js" crossorigin="anonymous"></script>
+    <style>
+        .dynamic-text {
+            color: #ff004f;
+            display: inline;
+        }
+    </style>
+    <script>
+        const words = ["Harish", "Open Source Enthausist", "Student", "Teacher", "Explorer", "Traveller", "Coder"];
+        let currentIndex = 0;
+
+        function changeText() {
+            const textElement = document.getElementById("dynamicText");
+            textElement.textContent = words[currentIndex];
+            currentIndex = (currentIndex + 1) % words.length;
+        }
+
+        setInterval(changeText, 1200);
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">My Work</a></li>
+                    <li><a href="#github">Github</a></li>
+
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+
+                <h1> Hi,I'm <div class="dynamic-text" id="dynamicText">
+                        <span>
+                            Harish
+                        </span>
+                    </div><br>
+                </h1>
+                <h6>
+                    <p>I am currently in my fourth year of pursuing a B.Tech degree in <br> Computer Science</p>
+                </h6>
+            </div>
+        </div>
+
+    </div>
+    <!-- -------------about----------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user-1.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am currently in my fourth year pursuing a B.Tech degree in Computer Science at Raghu Instiute
+                        of Technology,Viskhapatnam.
+                        My academic journey has been
+                        complemented by active involvement in diverse projects, primarily focusing on Python.
+                        I have also ventured into web development, contributing to a well-rounded practical experience
+                        in these domains.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Django</span><br>Used for building the backend part of an website</li>
+                            <li><span>Python</span><br>Programming language</li>
+                            <li><span>Java</span><br>Programming language</li>
+                            <li><span>SQL</span><br>Managing and manipulating relational databases.</li>
+                            <li><span>Java script</span><br>Web development</li>
+                            <li><span>HTML &CSS</span><br>Building websites</li>
+                            <li><span>React</span><br>A Popular Front End Framework</li>
+                            <li><span>Pandas&Numpy</span><br>Python libraries</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Contributer</span><br>Girl Script of Code-(05/2024-Present)</li>
+                            <li><span>Teacher</span><br>DataPro-(02/2024-05/2024)</li>
+                            <li><span>Internship</span><br>Certimate Info Tech-(05/2023-07/2023)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B.Tech in Computer Sciencd</span><br>Raghu Instiute Of Technology(2020-2024)</li>
+                            <li><span>XII-Intermediate</span><br>Sri Prathibha Junior College Srikakulam(2020)</li>
+                            <li><span>High School</span><br>Gayatri Model High School(2018)</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------Portfolio------------------------>
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images\chatbot.png">
+                        <div class="layer">
+                            <h3>Chat Bot and Open Api Integration</h3>
+                            <p> I designed and developed an interactive chatbot using HTML, CSS, and JavaScript,
+                                seamlessly integrating it with OpenAI's advanced natural language processing
+                                capabilities. This chatbot delivers an intuitive and engaging user experience,
+                                efficiently understanding and responding to a wide range of queries. </p>
+                            <a href="https://harish-2003.github.io/"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/textutils.png">
+                        <div class="layer">
+                            <h3>Text Utils</h3>
+                            <p>I designed a versatile text utility application using HTML, CSS, JavaScript, and React.
+                                The front-end, styled with CSS, offers a clean and responsive interface for seamless
+                                user interaction. Utilizing React, the application provides dynamic and real-time text
+                                manipulation features, such as text formatting, case conversion, word count, and more
+                            </p>
+                            <a href="https://harish-2003.github.io/rock-paper-scissor/"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/rockpaperscissor.png">
+                        <div class="layer">
+                            <h3>Rock Paper Scissor Game</h3>
+                            <p>I designed a fun and interactive Rock Paper Scissors game using HTML, CSS, and
+                                JavaScript. The user interface features visually appealing icons for rock, paper, and
+                                scissors, encouraging user engagement. The game dynamically updates the score for both
+                                the user and the computer, providing real-time feedback on the outcome of each round
+                            </p>
+                            <a href="https://harish-2003.github.io/rock-paper-scissor/"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="work">
+                        <img src="images/hotel.png">
+                        <div class="layer">
+                            <h3>Hotel Management Website</h3>
+                            <p>
+                                I designed a hotel management website using HTML, CSS, and Django, which allows users to
+                                view menus and other services offered by the hotel. The front-end, crafted with HTML and
+                                CSS, provides an attractive and responsive interface, ensuring a seamless user
+                                experience across all devices. On the back-end, Django manages the dynamic content,
+                                enabling features such as viewing dining menus and exploring hotel amenities.</p>
+                            <a href="https://github.com/Harish-2003/littlelemon"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------GitHub Contributions------------------->
+        <div id="github">
+            <div class="container">
+                <h1 class="sub-title">Github Stats</h1>
+                <div class="work-list">
+                    <div class="work1">
+                        <img src="https://github-readme-stats.vercel.app/api/top-langs?username=harish-2003&show_icons=true&locale=en&layout=compact"
+                            alt="harish-2003" />
+                    </div>
+                    <div class="work1">
+                        <img src="https://github-readme-stats.vercel.app/api?username=harish-2003&show_icons=true&locale=en"
+                            alt="harish-2003" alt="harish-2003" />
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h1 class="sub-title">Latest Pull Requests</h1><br>
+                <div class="merges-container">
+                    <div id="merges"></div>
+                </div>
+            </div>
+
+
+            <script>
+                const username = "harish-2003";
+                const mergesContainer = document.getElementById('merges');
+
+                // Function to fetch latest commits
+
+                // Function to fetch latest merges
+                async function fetchMerges() {
+                    const response = await fetch(`https://api.github.com/search/issues?q=author:${username}+is:pr+is:merged&per_page=5`);
+                    const data = await response.json();
+                    const merges = data.items;
+                    mergesContainer.innerHTML = '';
+                    merges.forEach(merge => {
+                        const mergeDiv = document.createElement('div');
+                        mergeDiv.classList.add('merge');
+                        const mergeMessage = document.createElement('p');
+                        mergeMessage.classList.add('merge-message');
+                        mergeMessage.textContent = merge.title;
+                        mergeDiv.appendChild(mergeMessage);
+                        mergesContainer.appendChild(mergeDiv);
+                    });
+                }
+                fetchMerges();
+            </script>
+        </div>
+    </div> <!--------------contact------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>harishpeddina4@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>8977175516</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/harish-peddina/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/haris__5012"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.github.com/harish-2003"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href=" images/My Cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ Harish <i class="fa-solid fa-heart"></i>. </p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+
+
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwVQP561fVGaSGEnEfk7TSMjyJP9M4GQ-okrkhKSVi4F3F5-DH9_T8kZsQnn3fd7IJDpA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+
+
+
+</body>
+
+</html>
